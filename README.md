@@ -11,6 +11,7 @@ A 'Full Stack Eletro' é um projeto em HTML, CSS3 e JavaScript.
 ## Índice
 * [Sobre o projeto](#sobre-o-projeto)
 * [Tech](#tecnologias)
+* [Screenshots](#screenshots)
 * [Updates](#atualizações)
 
 ## Sobre o projeto
@@ -24,6 +25,11 @@ Atualmente rodando com:
 - [x] HTML5
 - [x] CSS3
 - [x] ES6
+
+## Screenshots
+
+<img width="45%" src="/Screenshots/screenshoti.png"> <img width="45%" src="/Screenshots/screenshotc.png"><br><br>
+<img width="45%" src="/Screenshots/screenshotp.png"> <img width="45%" src="/Screenshots/screenshotl.png">
 	
 ## Atualizações
 Algumas atualizações feitas na última versão (12/10/20) e futuras implementações:
