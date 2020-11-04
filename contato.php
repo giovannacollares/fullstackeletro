@@ -1,3 +1,26 @@
+<?php
+
+include('conexaodb.php');
+
+if(isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['telefone']) && isset($_POST['mensagem'])) {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $mensagem = $_POST['mensagem'];
+
+    $sql = "insert into contato (nome, email, mensagem) values ('$nome', '$email', $telefone, '$mensagem');";
+    $result = $conexao->query($sql);
+
+    if ($result){
+        echo "Inserido com sucesso!";
+        //header("Refresh:5;conexaodb.php");
+    }
+    else {
+        echo "Houve um erro ao salvar...";
+    }
+    };
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -8,43 +31,36 @@
     </head>
 
         <body>
-            <!--Menu Inicial-->
-            <nav class="navBar">
-                <ul>
-                    <li><a class="active" href="index.html"><img style="background: #FFCC00;" src="./Imagens/logo2.svg" alt="Página Inicial"></a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="lojas.html">Nossas Lojas</a></li>
-                    <li><a href="produtos.html">Eletrodomésticos</a></li>
-                </ul>  
-            </nav>
+            <!--Menu Inicial-->            
+            <?php 
+            include('menu.html');
+            ?>
+
+
             <!--Fim do Menu Inicial-->
             <br><br><br><br><br><br><br>
             <!--Formulário de Contato-->
                 <section class="contactSec">
                 <div class="contact-image"><img src="./Imagens/Contato/bannercontato.gif" alt="Fale Conosco e Tire suas Dúvidas" ></div>
                 <div class="contact-form">
-                <form>
+                <form method="post" action="">
                     <label for="name">Nome</label>
                     <br>
-                    <input type="text" id="name" name="Nome">
-                    <br><br><br>
+                    <input type="text" name="nome">
+                    <br><br>
                     <label for="email">E-mail</label>
                     <br>
-                    <input type="text" id="email" name="Email">
-                    <br><br><br>
+                    <input type="text" name="email">
+                    <br><br>
                     <label for="phonenumber">Telefone</label>
                     <br>
-                    <input type="number" id="phonenumber" name="Telefone">
-                    <br><br><br>
-                    <label for="region">Região</label>
-                    <br>
-                    <input type="text" id="region" name="Regiao">
-                    <br><br><br>
+                    <input type="number" name="telefone">
+                    <br><br>
                     <label for="message">Deixe sua mensagem</label>
                     <br>
-                    <textarea id="message"></textarea>
-                    <br><br><br>
-                    <input type="submit">
+                    <textarea type="text" name="mensagem"></textarea>
+                    <br><br>
+                    <input type="submit" name="submit" value="Enviar">
                     <br><br>
                     </div>
                     <hr>

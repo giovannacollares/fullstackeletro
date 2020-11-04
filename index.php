@@ -9,15 +9,11 @@
     </head>
 
         <body>    
-            <!--Menu Inicial-->
-            <nav class="navBar">
-                <ul>
-                    <li><a class="active" href="index.html"><img style="background: #FFCC00;" src="./Imagens/logo2.svg" alt="Página Inicial"></a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="lojas.html">Nossas Lojas</a></li>
-                    <li><a href="produtos.html">Eletrodomésticos</a></li>
-                </ul>  
-            </nav>
+           
+            <!--Menu Inicial-->            
+            <?php 
+            include('menu.html');
+            ?>
             <!--Fim do Menu Inicial-->
             <br><br><br><br><br><br>
             <!--Conteúdo da Página-->
