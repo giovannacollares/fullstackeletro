@@ -2,10 +2,10 @@
 
 $servername ='localhost';
 $username = 'root';
-$password = 'recodepro2020';
+$password = '';
 $database = 'fseletro';
 
-$conexao = mysqli_connect("localhost", "root", "recodepro2020", "fseletro", 3306);
+$conexao = mysqli_connect("localhost", "root", "", "fseletro", 3306);
 
 
 // verificando a conexão
