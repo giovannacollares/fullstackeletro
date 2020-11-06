@@ -28,7 +28,7 @@ Atualmente rodando com:
 - [x] PHP
 
 ## Screenshots
-Versão antiga (v1 até v4)
+Versão antiga (v1 até v4)<br>
 <img width="45%" src="/Screenshots/screenshoti.png"> <img width="45%" src="/Screenshots/screenshotc.png"><br><br>
 <img width="45%" src="/Screenshots/screenshotp.png"> <img width="45%" src="/Screenshots/screenshotl.png">
 	
