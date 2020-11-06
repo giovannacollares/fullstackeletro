@@ -1,0 +1,20 @@
+.lojas table {
+    border: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.lojas {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.lojas td {
+    width: 33%;
+    text-align: center;
+}
+
+.map {
+    height: 400px;
+    width: 100%;
+  }

@@ -1,0 +1,44 @@
+
+.categorias h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+.categorias ul {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: left;
+}
+
+
+
+.productsList {
+    vertical-align: top;
+    display: inline-block;
+    line-height: 20px;
+    margin-left:20px;
+    margin-top:50px;
+
+}
+
+.products {        
+    width: 1100px;
+    display: inline-block;
+    text-align: justify;
+}  
+
+.products-box {   
+    width: 350px;
+    height: 350px;   
+    display: inline-block;
+    padding: 10px 5px 20px 40px;
+    text-align: center;
+}
+
+.products-box img {
+    width: 120;
+    /*height: 120px;*/
+}
+
+.price {
+    color: red;
+    font-size: 20px;
+}

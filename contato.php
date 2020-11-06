@@ -1,106 +1,78 @@
-<?php
-
-include('conexaodb.php');
-
-if(isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['telefone']) && isset($_POST['mensagem'])) {
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $telefone = $_POST['telefone'];
-    $mensagem = $_POST['mensagem'];
-
-    $sql = "insert into contato (nome, email, mensagem) values ('$nome', '$email', $telefone, '$mensagem');";
-    $result = $conexao->query($sql);
-
-    if ($result){
-        echo "Inserido com sucesso!";
-        //header("Refresh:5;conexaodb.php");
-    }
-    else {
-        echo "Houve um erro ao salvar...";
-    }
-    };
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Contato</title>
-        <link rel="stylesheet" href="./CSS/contato.css">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Eletro</title>
 
-        <body>
-            <!--Menu Inicial-->            
-            <?php 
-            include('menu.html');
-            ?>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!--css-->
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/contato.css">
+    <!--fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <!--api mapa-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+    <!--icones-->
+    <script src="https://kit.fontawesome.com/0d3f1f7bd2.js" crossorigin="anonymous"></script>
+</head>
+<body>
 
+<!--barra de navegação-->
+<?php
+include "./php/includes/nav.html";
+?>
+<!--formulário de contato-->
+    <section class="contato">
+        <div class="contatoimg"><img src="./imagens/contato/bannercontato.gif" alt="Fale Conosco e Tire suas Dúvidas" ></div>
+        <div class="contatoform">
+        <form method="post" action="./php/actions/postcontato.php">
+            <div class="form-group">
+                <label for="name">Nome</label><br>
+                <input type="text" name="nome">
+            </div>
+            <div class="form-group">
+            <label for="email">E-mail</label><br>
+            <input type="text" name="email">
+            </div>
+            <div class="form-group">
+            <label for="phonenumber">Telefone</label><br>
+            <input type="number" name="telefone">
+            </div>
+            <div class="form-group">
+            <label for="message">Deixe sua mensagem</label><br>
+            <textarea type="text" name="mensagem"></textarea>
+            </div>
+            <input type="submit" name="submit" value="Enviar">
+            </div>
+        </form>
+        </section>
+    
 
-            <!--Fim do Menu Inicial-->
-            <br><br><br><br><br><br><br>
-            <!--Formulário de Contato-->
-                <section class="contactSec">
-                <div class="contact-image"><img src="./Imagens/Contato/bannercontato.gif" alt="Fale Conosco e Tire suas Dúvidas" ></div>
-                <div class="contact-form">
-                <form method="post" action="">
-                    <label for="name">Nome</label>
-                    <br>
-                    <input type="text" name="nome">
-                    <br><br>
-                    <label for="email">E-mail</label>
-                    <br>
-                    <input type="text" name="email">
-                    <br><br>
-                    <label for="phonenumber">Telefone</label>
-                    <br>
-                    <input type="number" name="telefone">
-                    <br><br>
-                    <label for="message">Deixe sua mensagem</label>
-                    <br>
-                    <textarea type="text" name="mensagem"></textarea>
-                    <br><br>
-                    <input type="submit" name="submit" value="Enviar">
-                    <br><br>
-                    </div>
-                    <hr>
-                    <br>
-                </form>
-                </section>
-            <!--Fim de Formulário de Contato-->       
+<!--informações de contato-->
+        <section class="contatoinfo">
+        <table>
+            <tr>
+                <td>
+                    <img src="./imagens/contato/whatsappicon.svg">
+                    <p>(21) 9 4444-4444</p>
+                </td>
+                <td>
+                    <img src="./imagens/contato/emailicon.svg" width="80px">
+                    <p>contato@fseletro.com.br</p>
+                </td>
+            </tr>
+        </table>
+        </section>
+<!--footer-->
+<?php
+include "./php/includes/footer.html";
+?>
 
-            <!--Informações de Contato-->
-                <section class="contactInfo">
-                <table>
-                    <tr>
-                        <td>
-                            <img src="./Imagens/Contato/whatsappicon.svg">
-                            <p>(21) 9 4444-4444</p>
-                        </td>
-                        <td>
-                            <img src="./Imagens/Contato/emailicon.svg" width="80px">
-                            <p>contato@fseletro.com.br</p>
-                        </td>
-                    </tr>
-                </table>
-                <hr>
-                </section>
-            <!--Fim de Informações de Contato-->
-                <br> <br> <br> <br> <br>  <br> 
-            <!--Formas de Pagamento-->
-            <section class="payment">
-                <h4>Formas de Pagamento:</h4>
-                <img src="./Imagens/pagamento.png" alt="Formas de Pagamento">
-            </section>
-            <!--Fim de Formas de Pagamento-->
-
-            <br> <br> <br>
-
-            <!--Copyright-->
-            <footer>
-            <h5>&copy RecodePro</h5> 
-            </footer>
-            <!--Fim do Copyright-->
-            
-        </body>
+</body>
 </html>

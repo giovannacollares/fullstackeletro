@@ -1,0 +1,66 @@
+.promobg {
+    height: 90px;
+    background: #FFCE0B;
+}
+
+.promobg h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 68px;
+
+    padding-top: 10px;
+    align-items: center;
+    text-align: center;
+
+    color: #25B7D3;
+}
+
+.promos {
+    margin-top: 100px;
+}
+
+.promocard {
+    margin-left: 80px;
+
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+
+    text-align: center;
+
+    border: 6px solid #25B7D3;
+    border-radius: 37px;
+}
+
+.card-body img {
+
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.card-body .descricao {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.card-body .preco {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-body .precofinal {
+    font-size: 36px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.sobrebg {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.sobre img {
+    width: 100%;
+}
+   

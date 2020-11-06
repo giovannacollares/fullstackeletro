@@ -1,35 +1,34 @@
-<?php
-
-include "conexaodb.php";
-include "postpedido.php";
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Nossos Produtos</title>
-        <link rel="stylesheet" href="./CSS/produtos.css">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Eletro</title>
 
-        <!--scripts e bootstrap-->
-        <script src="./JavaScript/funcoes.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    </head>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!--css-->
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/produto.css">
+    <!--fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <!--scripts-->
+    <script src="./js/funcoes.js"></script>
+    <!--icones-->
+    <script src="https://kit.fontawesome.com/0d3f1f7bd2.js" crossorigin="anonymous"></script>
+</head>
+<body>
 
-        <body>
-            <!--Menu Inicial-->
-            <?php 
-                include('menu.html');
-            ?>
-            <br><br><br><br><br><br><br><br>
-            <!--Tabela de Produtos Disponíveis-->
-                <section class="productsList">
+<!--barra de navegação-->
+<?php 
+include "./php/includes/nav.html";
+?>
+
+<!--sessão de categorias-->
+<section class="productsList">
                         <div class="categorias" >
                             <ul>
                                 <li onclick="exibir_todos('todos')">Todas Categorias (9)</li>
@@ -60,7 +59,7 @@ include "postpedido.php";
                                 <div class="row">
                                     <div class="col-sm">
                                     <div class="modal-body">
-                                    <form method="post" action="postpedido.php">
+                                    <form method="post" action="./php/actions/postpedido.php">
                                     <label>Nome Completo:</label><br>
                                     <input type="text" name="nomecompleto"><br>
                                     <label>Endereço:</label><br>
@@ -114,6 +113,9 @@ include "postpedido.php";
                     <section class="products">
 
                         <?php
+
+                            include "./php/includes/conexaodb.php";
+
                             $sql = "select * from produtos";
                             $result = $conexao->query($sql);
                             
@@ -126,8 +128,8 @@ include "postpedido.php";
                             <img src="<?php echo $rows['imagens'];?>" alt="<?php echo $rows['descricao'];?>" width="120" onclick="destaque(this)">
                             <div class="description"><?php echo $rows['descricao'];?></div>
                             <hr>
-                            <div class="description"><strike><?php echo $rows['preco'];?></strike></div>
-                            <div class="price"><?php echo $rows['precofinal'];?><br></div>
+                            <div class="description"><strike>R$<?php echo $rows['preco'];?></strike></div>
+                            <div class="price">R$<?php echo $rows['precofinal'];?><br></div>
                             </div>
                         
                         <?php
@@ -137,20 +139,12 @@ include "postpedido.php";
                                 
                                 }
                         ?>
+                        </section>
+    <!--footer-->
 
-            <!--Formas de Pagamento-->
-            <section class="payment">
-                <h4>Formas de Pagamento:</h4>
-                <img src="./Imagens/pagamento.png" alt="Formas de Pagamento">
-            </section>
-            <!--Fim de Formas de Pagamento-->
+    <?php 
+    include "./php/includes/footer.html";
+    ?>
+</body>
 
-            <br> <br> <br>
-
-            <!--Copyright-->
-            <footer>
-            <h5>&copy RecodePro</h5> 
-            </footer>
-            <!--Fim do Copyright-->
-            </body>
 </html>

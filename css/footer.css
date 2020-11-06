@@ -1,0 +1,22 @@
+footer {
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+}
+
+footer h5 {
+    color: #FFCE0B;
+    padding-bottom: 10px;
+}
+
+footer i {
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+.copyright {
+    justify-content: center;
+    margin-top: 40px;
+}

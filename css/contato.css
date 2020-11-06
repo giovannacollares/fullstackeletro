@@ -1,0 +1,76 @@
+.contatoimg img {
+    height: 650px;
+    margin-left: 50px;
+}
+
+.contatoimg {
+    display: inline-block;
+}
+
+.contatoform {
+    float: right;
+}
+
+form {
+    margin-top:100px;
+    margin-right: 30px;
+    width: 400px;
+    border: 1px solid rgb(213, 213, 213);
+    padding-top: 10px;
+}
+
+.contato form {
+    font-family: 'Roboto', cursive;
+    font-size: 20px;
+    text-align: center;
+}
+.contato input[type=text], input[type=number] {
+    width: 250px;
+    border: none;
+    border-bottom: 1px solid;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+    
+}
+
+.contato textarea {
+    border: none;
+    width: 250px;
+    height: 70px;
+    border-bottom: 1px solid;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
+
+.contato input[type=submit] {
+    background-color: #FFCC00;
+    border:none;
+    border-radius: 45%;
+    color: #f5f5f5;
+    padding: 10px 32px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contatoinfo table {
+    border:0;
+    width:100%; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.contatoinfo {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.contatoinfo td {
+    width: 50%;
+    text-align: center;
+    
+}
+
+.contatoinfo img {
+    width: 60px;
+}
