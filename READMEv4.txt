@@ -1,10 +1,13 @@
-Full Stack Eletros 4.0
+Full Stack Eletro 5.0
 
-Foram adicionadas as seguintes funcionalidades:
-- Conexão com o banco de dados
-- Formulário de pedidos conectado ao bd e persistindo
+Foram adicionadas as seguintes funcionalidades em Bootstrap:
+- Novas barras de navegação em nav
+- Sessão de ofertas do dia como containers e cards na index
+- Footer
+- Formulário de pedidos continua sendo um Modal
+- Adicionado carousel de imagens no index
 
-Todas as páginas agora são .php
-O formulário foi implementado através de um Modal de Bootstrap
-Os produtos são resgatados do banco de dados
-O repositório conta com uma nova pasta que abriga o banco de dados do site para consulta
+
+O layout do site está de cara nova e foi repensado para abrigar novas mudanças
+A página de Lojas foi adicionado um mapa para que se possa ver onde são os endereços das filiais
+
