@@ -5,7 +5,7 @@ A 'Full Stack Eletro' é um projeto em HTML, CSS3 e JavaScript.
 
 
 
-<div align="center"> <img width="500px" src="/Imagens/logo2.svg"> <br>
+<div align="center"> <img width="500px" src="/imagens/logo.svg"> <br>
 <em>Programadores tem 30% de desconto em todos os produtos da loja!</em> :satisfied: </div>
 
 ## Índice
@@ -25,17 +25,19 @@ Atualmente rodando com:
 - [x] HTML5
 - [x] CSS3
 - [x] ES6
+- [x] PHP
 
 ## Screenshots
-
+Versão antiga (v1 até v4)
 <img width="45%" src="/Screenshots/screenshoti.png"> <img width="45%" src="/Screenshots/screenshotc.png"><br><br>
 <img width="45%" src="/Screenshots/screenshotp.png"> <img width="45%" src="/Screenshots/screenshotl.png">
 	
 ## Atualizações
-Algumas atualizações feitas na última versão (12/10/20) e futuras implementações:
+Algumas atualizações feitas na última versão (06/11/20) e futuras implementações:
 
-- [x] Implementadas funções em JavaScript
-- [x] Logo atualizada para .svg
-- [x] Nova estrutura da página 'Contato'
-- [ ] Adicionar reponsividade
-- [ ] Repensar o layout
+- [x] Layout repaginado
+- [x] Inserção de Bootstrap
+- [x] Inserção do API OverLays
+- [x] Novo formulário de pedidos
+- [ ] Ajustar design da página de produtos
+- [ ] Adicionar um carrinho de compras
