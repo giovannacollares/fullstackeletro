@@ -37,7 +37,7 @@ Algumas atualizações feitas na última versão (06/11/20) e futuras implementa
 
 - [x] Layout repaginado
 - [x] Inserção de Bootstrap
-- [x] Inserção do API OverLays
+- [x] Inserção do API OpenLayers
 - [x] Novo formulário de pedidos
 - [ ] Ajustar design da página de produtos
 - [ ] Adicionar um carrinho de compras
